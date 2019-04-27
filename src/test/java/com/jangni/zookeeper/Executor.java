@@ -37,12 +37,8 @@ public class Executor implements Watcher, Runnable, DataMonitor.DataMonitorListe
      * @param args
      */
     public static void main(String[] args) {
-        if (args.length < 4) {
-            System.err
-                    .println("USAGE: Executor hostPort znode filename program [args ...]");
-            System.exit(2);
-        }
-        String hostPort = args[0];
+
+        String hostPort = "192.168.0.121:2181,192.168.0.122:2181,192.168.0.123:2181";
         String znode = args[1];
         String filename = args[2];
         String exec[] = new String[args.length - 3];
