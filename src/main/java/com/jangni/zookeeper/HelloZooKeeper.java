@@ -9,6 +9,10 @@ import org.apache.zookeeper.data.Id;
 import org.apache.zookeeper.server.auth.DigestAuthenticationProvider;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.support.AbstractRefreshableApplicationContext;
+import org.springframework.stereotype.Repository;
+import org.springframework.stereotype.Service;
 
 import java.io.IOException;
 import java.security.NoSuchAlgorithmException;
@@ -24,9 +28,10 @@ import java.util.Properties;
  * @Date 2019/4/26 21:31
  * @Version 1.0
  **/
-public class HelloZooKeeper {
-    static Logger logger = LoggerFactory.getLogger(HelloZooKeeper.class);
 
+public class HelloZooKeeper {
+
+    static Logger logger = LoggerFactory.getLogger(HelloZooKeeper.class);
     public static void main(String[] args) throws IOException {
 
         Properties config = new Properties();
